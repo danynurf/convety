@@ -1,0 +1,240 @@
+
+:root {
+    --primary: #d4adfc;
+    --bg: #090f46;
+    --accent: #040936;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary);
+    font-size: 1.4rem;
+    background-color: var(--bg);
+}
+
+header,
+.formula {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    margin-top: 20vh;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.4rem;
+    margin-top: 1.2rem;
+    margin: 0 auto;
+}
+
+.input-output {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    align-items: flex-end;
+    width: min(750px, 90%);
+    margin: 1.2rem auto 0;
+}
+
+.input-container,
+.output-container{
+    margin-top: 1.2rem;
+    width: 100%;
+}
+
+select,
+input {
+    font-family: inherit;
+    font-size: inherit;
+    text-align: center;
+    margin: 0 auto;
+}
+
+input {
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    padding: 1.2rem;
+    width: 100%;
+    border-radius: 4rem;
+    margin-top: 1.2rem;
+    color: var(--primary);
+}
+
+::placeholder {
+    color: var(--primary);
+    opacity: .5;
+}
+
+:-ms-input-placeholder {
+    color: var(--primary);
+    opacity: .5;
+}
+
+::-ms-input-placeholder {
+    color: var(--primary);
+    opacity: .5;
+}
+
+select {
+    width: 100%;
+    border-radius: 1.2rem;
+    background-color: transparent;
+    color: var(--primary);
+    font-size: inherit;
+}
+
+option {
+    background-color: var(--primary);
+    color: var(--bg);
+    font-size: inherit;
+}
+
+.icon {
+    transform: scale(1.5);
+}
+
+.icon-container {
+    transform: translateY(-0.9rem);
+}
+
+.formula {
+    width: 100%;
+    border-radius: 1.2rem;
+    position: absolute;
+    bottom: 0;
+}
+
+.formula-box {
+    width: min(90%, 700px);
+    background-color: var(--accent);
+    margin: 0 auto;
+    padding: 2rem 0;
+    border-radius: 4rem 4rem 0 0;
+    height: auto;
+    position: relative;
+}
+
+.formula-box p {
+    word-wrap: break-word;
+    width: 90%;
+    overflow-y: auto;
+    max-height: 8rem;
+    scrollbar-color: var(--primary);
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    text-align: center;
+    width: 20rem;
+    height: 4rem;
+    border-radius: 2rem;
+    background-color: var(--primary);
+    border: 1px solid var(--primary);
+    color: var(--bg);
+}
+
+button:last-child {
+    background-color: transparent;
+    color: var(--primary);
+}
+
+/* Responsive to Screen Width */
+
+/* Laptop */
+@media (max-width: 1366px) {
+    html,
+    option {
+        font-size: 80%;
+    }
+
+    .icon {
+        transform: scale(1);
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    html,
+    option {
+        font-size: 70%;
+    }
+
+    
+}
+
+@media (max-width: 660px) {
+    .input-output {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .input-container,
+    .output-container,
+    .button {
+        width: 70%;
+    }
+
+    .icon {
+        display: none;
+    }
+
+    .button {
+        margin: 3rem auto 0;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+    html,
+    option {
+        font-size: 60%;
+    }
+
+    header {
+        margin-top: 12vh;
+    }
+
+    .input-container,
+    .output-container,
+    .button {
+        width: 90%;
+    }
+
+    .formula {
+        bottom: 3%;
+    }
+
+    .formula-box {
+        border-radius: 2rem;
+        height: auto;
+    }
+}

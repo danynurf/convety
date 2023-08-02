@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convety</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com?family=Poppins:wght@300;400;700&display=swap"  rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/rest.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Convety</h1>
+        <p>Enter the value you want below!</p>
+    </header>
+
+    <main>
+        <section class="input-output">
+            <div class="input-container">
+                <select name="T" id="input-option">
+                    <option value="celcius">Celcius (&deg;C)</option>
+                    <option value="fahrenheit">Fahrenheit (&deg;F)</option>
+                    <option value="reamur">Reamur (&deg;Re)</option>
+                    <option value="kelvin">Kelvin (K)</option>
+                </select><br>
+                <input type="number" class="value" id="input" placeholder="Enter a value" value="">
+            </div>
+
+            <div class="icon-container"><i data-feather="arrow-right" class="icon"></i></div>
+
+            <div class="output-container">
+                <select name="T" id="output-option">
+                    <option value="celcius">Celcius (&deg;C)</option>
+                    <option value="fahrenheit" selected>Fahrenheit (&deg;F)</option>
+                    <option value="reamur">Reamur (&deg;Re)</option>
+                    <option value="kelvin">Kelvin (K)</option>
+                </select><br>
+                <input type="number" class="value" id="output" placeholder="??" value="">
+            </div>
+        </section>
+        
+        <div class="button" id="button">
+            <button type="button" class="btn" id="result">Convert</button>
+            <button type="button" class="btn" id="reset">Reset</button>
+        </div>
+
+        <section class="formula" id="formula">
+            <div class="formula-box"> 
+                <h2>Formula</h2>
+                <p id="howto">(0 &deg;C &times; 9/5) + 32 = 32 &deg;F</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Feather Icons -->
+    <script>
+        feather.replace()
+    </script>
+
+    <!-- Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
